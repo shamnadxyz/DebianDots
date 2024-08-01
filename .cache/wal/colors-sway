@@ -1,0 +1,19 @@
+set $background #0f1016
+set $foreground #e1b3ba
+
+set $color0 #0f1016
+set $color1 #505071
+set $color2 #AE6573
+set $color3 #F8A355
+set $color4 #3F5181
+set $color5 #63658C
+set $color6 #996D89
+set $color7 #e1b3ba
+set $color8 #9d7d82
+set $color9 #505071
+set $color10 #AE6573
+set $color11 #F8A355
+set $color12 #3F5181
+set $color13 #63658C
+set $color14 #996D89
+set $color15 #e1b3ba

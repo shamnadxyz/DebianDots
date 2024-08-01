@@ -1,0 +1,5 @@
+#!/bin/bash
+selected=$(nmcli -t -f active,name connection | wofi -d -r "echo \"%s\" | sed 's/yes\:/*/;s/no\://'")
+connection="${selected#*:}"
+[ "$selected" ] || exit 1
+[ "${selected%%:*}" = "no" ] && (nmcli connection up "$connection" && notify-send "Connected to $connection" ) || (nmcli connection down "$connection" && notify-send "Disconnected from $connection")

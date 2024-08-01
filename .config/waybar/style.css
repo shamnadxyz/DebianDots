@@ -1,0 +1,60 @@
+@import url("../../.cache/wal/colors-waybar.css");
+
+* {
+  font-family: Hack Nerd Font;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+window#waybar {
+  background: transparent;
+  color: @foreground;
+}
+
+#workspaces button {
+  padding: 0;
+  color: @color2;
+  background: transparent;
+}
+
+#workspaces button.visible {
+  color: @background;
+}
+
+#workspaces button.focused {
+  color: @background;
+}
+
+#workspaces button.urgent {
+  color: #11111b;
+}
+
+#workspaces button:hover {
+  background: transparent;
+}
+
+#clock,
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#bluetooth,
+#workspaces,
+#backlight,
+#battery,
+#tray {
+  color: @background;
+  border-radius: 8px;
+  padding: 5px 10px;
+  background-color: @foreground;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  margin-top: 6px;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+tooltip {
+  border-radius: 8px;
+  color: @background;
+  background-color: @foreground;
+}

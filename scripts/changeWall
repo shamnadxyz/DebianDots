@@ -1,0 +1,7 @@
+#!/bin/bash
+notify-send "\"Q\" to choose wallpaper"
+wallpaper="$(nsxiv -b "$WALLPAPERS" -rot)"
+if [[ $wallpaper ]] then
+    wal -i "$wallpaper" -n
+    dunstTheme &
+fi

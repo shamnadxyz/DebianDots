@@ -1,0 +1,11 @@
+#!/bin/bash
+choice="$(fd . ${MUSIC_DIR} -t symlink -t directory | wofi -d -r "echo -n \"%s\" | sed 's/\/$//;s/.*\///g'")"
+
+if [[ -d $choice ]]; then
+  killall mpv
+  sort_method=$(echo -e "New\nShuffle" | wofi -i --dmenu --width 100 --height 115 -p "Order By") 
+  case $sort_method in
+    New) fd "\.mp3|\.flac|.\wav" "$choice" -t file --exec-batch ls -t | sed "s/^/\"/;s/$/\"/" | exec xargs mpv;;
+    *) fd "\.mp3|\.flac|.\wav" "$choice" -t file | sed "s/^/\"/;s/$/\"/" | shuf | exec xargs mpv;;
+  esac 
+fi

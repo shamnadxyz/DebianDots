@@ -1,0 +1,5 @@
+#!/bin/bash
+source ${HOME}/.cache/wal/colors.sh
+sed "s/foreground.*/foreground = \"$foreground\"/;s/background.*/background = \"$background\"/;0,/frame_color.*/{s/frame_color.*/frame_color = \"$foreground\"/}" ${HOME}/.config/dunst/dunstrc -i
+killall dunst
+

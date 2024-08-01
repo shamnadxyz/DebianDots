@@ -1,0 +1,4 @@
+#!/bin/bash
+wallpaper=$(fd "\.jpg|\.png" ${WALLPAPERS} -t file | shuf -n 1)
+waybarBackground &
+wal -i "$wallpaper" -n

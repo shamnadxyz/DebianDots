@@ -1,0 +1,13 @@
+filter_rate=100
+halign=fill
+height=500
+hide_scroll=true
+insensitive=true
+layer=top
+normal_window=false
+no_actions=true
+prompt=Search
+show=drun
+sort_order=default
+term=kitty
+width=500

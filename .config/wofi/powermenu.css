@@ -1,0 +1,50 @@
+* {
+    font-family: "Hack Nerd Font";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#window {
+	background-color: --wofi-color0;
+	color: --wofi-color2;
+	border: 2px solid --wofi-color1;
+	border-radius: 10px;
+}
+
+#outer-box {
+	padding: 5px;
+}
+
+#scroll {
+	margin-top: 5px;
+}
+
+#text {
+	color: --wofi-color2;
+}
+
+#text:selected {
+	color: --wofi-color0;
+}
+
+#entry {
+	padding: 10px;
+}
+
+#entry:selected {
+	background-color: --wofi-color3;
+	color: --wofi-color0;
+}
+
+#input, #entry:selected {
+	border-radius: 5px;
+}
+#input > image.left {
+  -gtk-icon-transform:scaleX(0);
+}
+
+#input {
+	background-color: --wofi-color1;
+	border: 0px solid --wofi-color3;
+  color: --wofi-color0;
+}

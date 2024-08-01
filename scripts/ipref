@@ -1,0 +1,6 @@
+#!/bin/bash
+oldIP="$(grep "androidF" ~/.ssh/config | awk -F "#" '{print $2}')"
+[ $oldIP ] || exit 1
+newIP="$(arp -a | grep "gateway" | awk '{print $2}' | sed 's/[()]//g')"
+[ $newIP ] || exit 1
+sed "s/$oldIP/$newIP/" ~/.ssh/config -i
