@@ -2,6 +2,8 @@
 notify-send "\"Q\" to choose wallpaper"
 wallpaper="$(nsxiv -b "$WALLPAPERS" -rot)"
 if [[ $wallpaper ]] then
+    killall swaybg
     wal -i "$wallpaper" -n
     dunstTheme &
+    swaybg -i "$wallpaper" -m fill
 fi
