@@ -1,4 +1,4 @@
-# include ~/.cache/wal/colors-sway
+include ~/.cache/wal/colors-sway
 
 gaps inner 4
 gaps outer 0
@@ -21,9 +21,12 @@ set $menu wofi --show drun | xargs swaymsg exec --
 include /etc/sway/config-vars.d/*
 
 output * bg #000000 solid_color
+# output HDMI-A1 res 1920x1080 scale 1.0
+# output $laptop res 1920x1200 scale 1.25
 
 input type:touchpad {
-       tap enabled
+  natural_scroll enabled
+  tap enabled
 }
 
 bindswitch --reload --locked lid:on output $laptop disable
@@ -68,11 +71,6 @@ bindswitch --reload --locked lid:off output $laptop enable
     bindsym $mod+$down focus down
     bindsym $mod+$up focus up
     bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left
@@ -159,10 +157,11 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-assign [class="Brave-browser"] 2
-assign [class="Pcmanfm"] 3
-assign [class="Signal"] 4
-assign [app_id="mpv"] 5
+# Assigning apps to specific workspaces
+# assign [class="Brave-browser"] 2
+# assign [class="Thunar"] 3
+# assign [class="Signal"] 4
+# assign [app_id="mpv"] 5
 
 exec nm-applet
 exec dbus-update-activation-environment DISPLAY XAUTHORITY WAYLAND_DISPLAY
