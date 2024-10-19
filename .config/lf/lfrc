@@ -82,9 +82,8 @@ cmd archiveTo7zip ${{
         fi
 }}
 
-map a :push %mkdir<space>
+map F2 :push %mkdir<space>
 
-map gs cd /media/$USER/SSD
 map gd cd ~/.config
 # Mapping
 map D trash
