@@ -1,23 +1,23 @@
 [global]
     frame_width = 2
-    frame_color = "#e1b3ba"
+    frame_color = "#cdd7e1"
     icon_position = off
-    font = Hack Nerd Font 14
+    font = JetBrainsMono Nerd Font 14
     corner_radius = 8
 
 [urgency_low]
-    background = "#0f1016"
-    foreground = "#e1b3ba"
+    background = "#0B0C14"
+    foreground = "#cdd7e1"
     timeout = 3 
 
 [urgency_normal]
-    background = "#0f1016"
-    foreground = "#e1b3ba"
+    background = "#0B0C14"
+    foreground = "#cdd7e1"
     timeout = 3
     override_pause_level = 30
 
 [urgency_critical]
-    background = "#0f1016"
-    foreground = "#e1b3ba"
+    background = "#0B0C14"
+    foreground = "#cdd7e1"
     frame_color = "#fab387"
     timeout = 0
