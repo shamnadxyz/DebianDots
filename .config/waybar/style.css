@@ -1,9 +1,9 @@
 @import url("../../.cache/wal/colors-waybar.css");
 
 * {
-  font-family: Hack Nerd Font;
+  font-family: JetBrainsMono Nerd Font;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 window#waybar {
@@ -12,7 +12,7 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 0;
+  padding: 0px;
   color: @color2;
   background: transparent;
 }
@@ -44,7 +44,7 @@ window#waybar {
 #tray {
   color: @background;
   border-radius: 8px;
-  padding: 5px 10px;
+  padding: 2px 8px;
   background-color: @foreground;
   margin-left: 4px;
   margin-right: 4px;
