@@ -11,9 +11,9 @@
     "tray",
     "idle_inhibitor",
     "network",
-    "bluetooth",
-    "battery",
-    "backlight",
+    // "bluetooth",
+    // "battery",
+    // "backlight",
     "pulseaudio",
     "pulseaudio#microphone"
   ],
@@ -22,15 +22,16 @@
     "all-outputs": true,
     "format": "{icon}",
     "format-icons": {
-      "1": " ",
+      "1": " ",
       "2": " ",
       "3": " ",
       "4": " ",
       "5": " ",
+      "6": " ",
       "urgent": " ",
       "focused": " ",
-      "default": " ",
-      "high-priority-named": ["1", "2"]
+      "default": " "
+      // "high-priority-named": ["1", "2"]
     }
   },
   "clock": {
@@ -62,6 +63,7 @@
     "format": "{icon} {volume}%",
     "format-muted": "",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "reverse-scrolling": true,
     "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
     "scroll-step": 5,
@@ -79,6 +81,7 @@
     "format": "{format_source}",
     "format-source": " {volume}%",
     "format-source-muted": " ",
+    "reverse-scrolling": true,
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
     "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-",
@@ -125,6 +128,7 @@
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
     "format-icons": ["", ""],
+    "reverse-scrolling": true,
     "on-scroll-up" : "brightnessctl s 5%+",
     "on-scroll-down" : "brightnessctl s 5%- --min-value=4800"
   }
