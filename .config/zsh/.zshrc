@@ -62,6 +62,7 @@ setopt hist_ignore_dups
 
 autoload -Uz add-zsh-hook
 
+# Dirstack
 DIRSTACKFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/dirs"
 if [[ -f "$DIRSTACKFILE" ]] && (( ${#dirstack} == 0 )); then
 	dirstack=("${(@f)"$(< "$DIRSTACKFILE")"}")
