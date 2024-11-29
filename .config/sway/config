@@ -4,6 +4,8 @@ gaps inner 4
 gaps outer 0
 default_border pixel 2
 default_floating_border pixel 2
+# hide_edge_borders smart
+# smart_gaps on
 
 set $laptop eDP-1
 set $mod Mod1
@@ -20,13 +22,21 @@ set $menu wofi --show drun | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
-output * bg #000000 solid_color
+output * bg $wallpaper fill
 # output HDMI-A1 res 1920x1080 scale 1.0
 # output $laptop res 1920x1200 scale 1.25
 
 input type:touchpad {
   natural_scroll enabled
   tap enabled
+  dwt enabled
+}
+input type:pointer {
+  accel_profile "flat"
+  dwt enabled
+}
+input type:keyboard {
+  xkb_options caps:escape
 }
 
 bindswitch --reload --locked lid:on output $laptop disable
@@ -110,8 +120,8 @@ bindswitch --reload --locked lid:off output $laptop enable
     # We just use 1-10 as the default.
 
 # Layout stuff:
-    bindsym $mod+b splith
     bindsym $mod+v splitv
+    bindsym $mod+b splith
 
     # Switch the current container between different layout styles
     # bindsym $mod+s layout stacking
@@ -164,12 +174,14 @@ bindsym $mod+r mode "resize"
 # assign [app_id="mpv"] 5
 
 exec nm-applet
+exec /usr/lib/polkit-kde-authentication-agent-1
 exec dbus-update-activation-environment DISPLAY XAUTHORITY WAYLAND_DISPLAY
 exec gnome-keyring-daemon --start --components=secrets
 
 # Status Bar:
 bar {
   swaybar_command waybar
+  # mode hide
 }
 #colors
 # class                 border  backgr. text    indicator child_border
